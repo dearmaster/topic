@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JMS.iml" filepath="$PROJECT_DIR$/JMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JMS-Spring/JMS-Spring.iml" filepath="$PROJECT_DIR$/JMS-Spring/JMS-Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/JMS-simple/JMS-simple.iml" filepath="$PROJECT_DIR$/JMS-simple/JMS-simple.iml" />
     </modules>
   </component>

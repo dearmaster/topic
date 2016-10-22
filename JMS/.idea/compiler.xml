@@ -23,11 +23,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="JMS-simple" />
+        <module name="JMS-Spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="JMS" target="1.8" />
+      <module name="JMS" target="1.5" />
       <module name="JMS-simple" target="1.8" />
+      <module name="JMS-Spring" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
