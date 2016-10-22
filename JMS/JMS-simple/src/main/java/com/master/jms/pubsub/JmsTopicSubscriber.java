@@ -17,7 +17,8 @@ public class JmsTopicSubscriber {
     public JmsTopicSubscriber(String brokerUrl, String topicName) {
         TopicConnectionFactory factory = new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_USER, ActiveMQConnection.DEFAULT_PASSWORD, brokerUrl);
         try {
-            this.connection = factory.createTopicConnection();
+//            this.connection = factory.createTopicConnection();
+            connection = (TopicConnection) factory.createConnection("future", "bright");
             this.session = connection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic(topicName);
             this.subscriber = session.createSubscriber(topic, null, true);

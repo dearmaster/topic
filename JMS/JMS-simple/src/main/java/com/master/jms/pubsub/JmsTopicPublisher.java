@@ -25,7 +25,8 @@ public class JmsTopicPublisher {
     public JmsTopicPublisher(String brokerUrl, String topicName) {
         TopicConnectionFactory factory = new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_USER, ActiveMQConnection.DEFAULT_PASSWORD, brokerUrl);
         try {
-            this.connection = factory.createTopicConnection();
+//            this.connection = factory.createTopicConnection();
+            connection = (TopicConnection) factory.createConnection("future", "bright");
             this.session = (TopicSession) connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic(topicName);
             this.publisher = session.createPublisher(topic);

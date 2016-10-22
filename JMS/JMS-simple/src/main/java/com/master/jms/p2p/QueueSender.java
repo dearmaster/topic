@@ -18,8 +18,8 @@ public class QueueSender {
     private MessageProducer producer;
 
     public static void main(String[] args) {
-        sendBySingleThread();
-//        sendByMultiThread();
+//        sendBySingleThread();
+        sendByMultiThread();
     }
 
     public static void sendBySingleThread() {
@@ -83,7 +83,8 @@ public class QueueSender {
     public QueueSender(String brokerUrl, String queueName) {
         ConnectionFactory factory = new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_USER, ActiveMQConnection.DEFAULT_PASSWORD, brokerUrl);
         try {
-            connection = factory.createConnection();
+//            connection = factory.createConnection();
+            connection = factory.createConnection("future", "bright");
             session = connection.createSession(true, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createQueue(queueName);
             producer = session.createProducer(destination);

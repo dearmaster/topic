@@ -34,16 +34,18 @@ public class QueueReceiver {
         factory = new ActiveMQConnectionFactory(ActiveMQConnection.DEFAULT_USER, ActiveMQConnection.DEFAULT_PASSWORD, brokerUrl);
 
         try {
-            connection = factory.createConnection();
+//            connection = factory.createConnection();
+            connection = factory.createConnection("future", "bright");
             connection.start();
 
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             destination = session.createQueue(queueName);
             consumer = session.createConsumer(destination);
 
+
             while (true) {
-//                TextMessage msg = (TextMessage) consumer.receive(10000);
-                TextMessage msg = (TextMessage) consumer.receive();
+                TextMessage msg = (TextMessage) consumer.receive(10000);
+//                TextMessage msg = (TextMessage) consumer.receive();
 //                TextMessage msg = (TextMessage) consumer.receive(1);
                 if(null != msg) {
                     logger.debug("收到消息：" + msg.getText());
