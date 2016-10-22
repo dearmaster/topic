@@ -34,7 +34,8 @@ public class Sender {
             destination = session.createQueue(queueName);
 
             producer = session.createProducer(destination);
-            producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+            //set the delivery mode to be persistent to ensure the message won't be lost when the active mq server shutdown
+            producer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             sendMessage(session, producer, msg);
             session.commit();
