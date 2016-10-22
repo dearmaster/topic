@@ -16,7 +16,9 @@ public class JmsTopicPublisher {
 
     public static void main(String[] args) {
         JmsTopicPublisher jmsTopicPublisher = new JmsTopicPublisher("tcp://master:61616", "ToDear");
-        jmsTopicPublisher.publish("This is pub and sub pattern");
+        for(int i=0; i< Integer.MAX_VALUE; i++) {
+            jmsTopicPublisher.publish("This is pub and sub pattern");
+        }
         jmsTopicPublisher.close();
     }
 

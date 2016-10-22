@@ -26,8 +26,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="JMS" target="1.5" />
-      <module name="JMS-simple" target="1.5" />
+      <module name="JMS" target="1.8" />
+      <module name="JMS-simple" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

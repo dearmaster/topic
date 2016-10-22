@@ -18,8 +18,8 @@ public class QueueSender {
     private MessageProducer producer;
 
     public static void main(String[] args) {
-//        sendBySingleThread();
-        sendByMultiThread();
+        sendBySingleThread();
+//        sendByMultiThread();
     }
 
     public static void sendBySingleThread() {
@@ -45,6 +45,10 @@ public class QueueSender {
         System.out.println("Time needed for single thread: " + (endTime - startTime)/1000 + " seconds"); //32 second for 2w records
     }
 
+    /**
+     * if send the message by multi thread, the sequence of the messages
+     * that sent to the queue will not be a certain one
+     */
     public static void sendByMultiThread() {
         int MAX_MESSAGE_COUNT = 20000;
         java.util.Queue<String> queue = new ArrayBlockingQueue(MAX_MESSAGE_COUNT);

@@ -14,7 +14,14 @@ public class QueueReceiver {
     private static final String brokerUrl = "tcp://master:61616";
 
     public static void main(String[] args) {
+        receiveBySingleThread();
+    }
+
+    public static void receiveBySingleThread() {
+        long startTime = System.currentTimeMillis();
         new QueueReceiver().receive();
+        long endTime = System.currentTimeMillis();
+        logger.debug("Time needed for single thread run: " + (endTime - startTime) / 1000);
     }
 
     private void receive() {
@@ -35,7 +42,9 @@ public class QueueReceiver {
             consumer = session.createConsumer(destination);
 
             while (true) {
-                TextMessage msg = (TextMessage) consumer.receive(10000);
+//                TextMessage msg = (TextMessage) consumer.receive(10000);
+                TextMessage msg = (TextMessage) consumer.receive();
+//                TextMessage msg = (TextMessage) consumer.receive(1);
                 if(null != msg) {
                     logger.debug("收到消息：" + msg.getText());
                 } else {
