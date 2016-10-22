@@ -22,11 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="JMS" />
+        <module name="JMS-simple" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="JMS" target="1.5" />
+      <module name="JMS-simple" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
