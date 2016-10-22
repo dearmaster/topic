@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63bedb01-e21c-4cc3-ad5f-f296fcd71289" name="Default" comment="set the delivery mode to be persistent">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/p2p/QueueReceiver.class" afterPath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/p2p/QueueReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/p2p/QueueSender.class" afterPath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/p2p/QueueSender.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicPublisher.class" afterPath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicPublisher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicSubscriber$1.class" afterPath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicSubscriber$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicSubscriber.class" afterPath="$PROJECT_DIR$/JMS-simple/target/classes/com/master/jms/pubsub/JmsTopicSubscriber.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+    <list default="true" id="63bedb01-e21c-4cc3-ad5f-f296fcd71289" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/JMS-simple.iml" afterPath="$PROJECT_DIR$/JMS-simple/JMS-simple.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueReceiver.java" afterPath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueSender.java" afterPath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueSender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/pubsub/JmsTopicPublisher.java" afterPath="$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/pubsub/JmsTopicPublisher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JMS.iml" afterPath="$PROJECT_DIR$/JMS.iml" />
     </list>
     <ignored path="JMS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +31,8 @@
           <file leaf-file-name="QueueReceiver.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueReceiver.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="960">
-                  <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+                <state relative-caret-position="350">
+                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding>
                     <element signature="e#463#464#0" expanded="true" />
                     <element signature="e#502#503#0" expanded="true" />
@@ -880,7 +869,7 @@
       <workItem from="1477105887310" duration="784000" />
       <workItem from="1477106955922" duration="1903000" />
       <workItem from="1477108896126" duration="20766000" />
-      <workItem from="1477135175717" duration="4704000" />
+      <workItem from="1477135175717" duration="5661000" />
     </task>
     <task id="LOCAL-00001" summary="set the delivery mode to be persistent">
       <created>1477117578980</created>
@@ -896,15 +885,22 @@
       <option name="project" value="LOCAL" />
       <updated>1477137825633</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish">
+      <created>1477139898974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1477139898974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28157000" />
+    <option name="totallyTimeSpent" value="29114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -919,7 +915,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21908316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21908316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -948,7 +944,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set the delivery mode to be persistent" />
     <MESSAGE value="implement the logic to produce the message by multi thread." />
-    <option name="LAST_COMMIT_MESSAGE" value="implement the logic to produce the message by multi thread." />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1287,8 +1284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JMS-simple/src/main/java/com/master/jms/p2p/QueueReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="350">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#463#464#0" expanded="true" />
             <element signature="e#502#503#0" expanded="true" />
