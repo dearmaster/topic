@@ -1,4 +1,4 @@
-package com.master.jms;
+package com.master.jms.p2p;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -6,15 +6,15 @@ import org.apache.log4j.Logger;
 
 import javax.jms.*;
 
-public class Receiver {
+public class QueueReceiver {
 
-    private static final Logger logger = Logger.getLogger(Receiver.class);
+    private static final Logger logger = Logger.getLogger(QueueReceiver.class);
 
     private static final String queueName = "TEST_QUEUE";
     private static final String brokerUrl = "tcp://master:61616";
 
     public static void main(String[] args) {
-        new Receiver().receive();
+        new QueueReceiver().receive();
     }
 
     private void receive() {
