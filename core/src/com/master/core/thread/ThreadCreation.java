@@ -21,6 +21,9 @@ public class ThreadCreation {
     //sample 3, Executor service
     public static void createByExecutor() {
         ExecutorService es = Executors.newFixedThreadPool(20);
+        //ExecutorService es = Executors.newCachedThreadPool();
+        //ExecutorService es = Executors.newFixedThreadPool();
+
         for(int i=0; i<100; i++) {
             Callable<Void> task = new Callable<Void>() {
                 @Override
