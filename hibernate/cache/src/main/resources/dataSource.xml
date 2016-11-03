@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:/project.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${${SYSTEM_DB_${RUN_MODE}}_DRIVER}"/>
+        <property name="url" value="${${SYSTEM_DB_${RUN_MODE}}_URL}"/>
+        <property name="username" value="${${SYSTEM_DB_${RUN_MODE}}_USERNAME}"/>
+        <property name="password" value="${${SYSTEM_DB_${RUN_MODE}}_PASSWORD}"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.master.hibernate.model"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">${hibernate.prop.show_sql.${RUN_MODE}}</prop>
+                <prop key="hibernate.format_sql">${hibernate.prop.format_sql.${RUN_MODE}}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.prop.hbm2ddl.auto.${RUN_MODE}}</prop>
+                <prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext</prop>
+                <prop key="hibernate.dialect">${${SYSTEM_DB_${RUN_MODE}}_DIALECT}</prop>
+                
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
