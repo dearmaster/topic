@@ -1,15 +1,9 @@
 package com.master.hibernate.dao.impl;
 
-import java.util.Set;
-
+import com.master.hibernate.dao.EmployeeDao;
+import com.master.hibernate.model.Employee;
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +13,7 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.master.hibernate.dao.EmployeeDao;
-import com.master.hibernate.model.Employee;
+import java.util.Set;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/cache-db.xml" })
@@ -99,6 +92,19 @@ public class EmployeeDaoImplTest extends AbstractTransactionalJUnit4SpringContex
 		
 		Set<Employee> employees2 = employeeDao.loadByLastName(employee.getLastName());
 		for(Employee emp : employees2) {
+			logger.info(emp);
+		}
+	}
+	
+	@Test
+	public void test6LoadByFirstName() {
+		Set<Employee> employee1 = employeeDao.loadByFirstName(employee.getFirstName());
+		for(Employee emp : employee1) {
+			logger.info(emp);
+		}
+		
+		Set<Employee> employee2 = employeeDao.loadByFirstName(employee.getFirstName());
+		for(Employee emp : employee2) {
 			logger.info(emp);
 		}
 	}

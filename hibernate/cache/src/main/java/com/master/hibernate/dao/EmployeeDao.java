@@ -8,4 +8,6 @@ public interface EmployeeDao extends BaseDaoInterface<Employee> {
 	
 	Set<Employee> loadByLastName(String lastName);
 	
+	Set<Employee> loadByFirstName(String firstName);
+	
 }

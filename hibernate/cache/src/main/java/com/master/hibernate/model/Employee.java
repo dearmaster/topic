@@ -12,7 +12,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 //@Table(name = "employee_tbl", uniqueConstraints = { @UniqueConstraint(columnNames = { "id" } ) })
 @Table(name = "employee_tbl")
-@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE, region="employeeTestRegion")
 public class Employee {
 
 	@Id
